@@ -77,7 +77,7 @@ function OldYoutubeForm () {
         ) : null}
       </div>
 
-      <button>Submit</button>
+      <button type='submit'>Submit</button>
     </form>
   )
 }
