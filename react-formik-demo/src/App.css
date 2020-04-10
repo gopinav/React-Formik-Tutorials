@@ -10,7 +10,8 @@ label {
 }
 
 input[type='text'],
-input[type='email'] {
+input[type='email'],
+textarea {
   display: block;
   width: 400px;
   padding: 6px 12px;
