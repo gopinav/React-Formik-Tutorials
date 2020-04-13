@@ -8,7 +8,11 @@ const initialValues = {
   email: '',
   channel: '',
   comments: '',
-  address: ''
+  address: '',
+  social: {
+    facebook: '',
+    twitter: ''
+  }
 }
 
 const onSubmit = values => {
@@ -41,9 +45,7 @@ function YoutubeForm () {
           <label htmlFor='email'>Email</label>
           <Field type='email' id='email' name='email' />
           <ErrorMessage name='email'>
-            {
-              error => <div className='error'>{error}</div>
-            }
+            {error => <div className='error'>{error}</div>}
           </ErrorMessage>
         </div>
 
@@ -75,6 +77,16 @@ function YoutubeForm () {
               )
             }}
           </Field>
+        </div>
+
+        <div className='form-control'>
+          <label htmlFor='facebook'>Facebook profile</label>
+          <Field type='text' id='facebook' name='social.facebook' />
+        </div>
+
+        <div className='form-control'>
+          <label htmlFor='twitter'>Twitter profile</label>
+          <Field type='text' id='twitter' name='social.twitter' />
         </div>
 
         <button type='submit'>Submit</button>
