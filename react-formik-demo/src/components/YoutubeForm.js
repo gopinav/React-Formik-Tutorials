@@ -1,5 +1,12 @@
 import React from 'react'
-import { Formik, Form, Field, ErrorMessage, FieldArray } from 'formik'
+import {
+  Formik,
+  Form,
+  Field,
+  ErrorMessage,
+  FieldArray,
+  FastField
+} from 'formik'
 import * as Yup from 'yup'
 import TextError from './TextError'
 
@@ -69,8 +76,9 @@ function YoutubeForm () {
 
         <div className='form-control'>
           <label htmlFor='address'>Address</label>
-          <Field name='address'>
+          <FastField name='address'>
             {({ field, form, meta }) => {
+              // console.log('Field render')
               return (
                 <div>
                   <input type='text' {...field} />
@@ -78,7 +86,7 @@ function YoutubeForm () {
                 </div>
               )
             }}
-          </Field>
+          </FastField>
         </div>
 
         <div className='form-control'>
@@ -108,7 +116,7 @@ function YoutubeForm () {
               const { push, remove, form } = fieldArrayProps
               const { values } = form
               const { phNumbers } = values
-              console.log('fieldArrayProps', fieldArrayProps)
+              // console.log('fieldArrayProps', fieldArrayProps)
               return (
                 <div>
                   {phNumbers.map((phNumber, index) => (
