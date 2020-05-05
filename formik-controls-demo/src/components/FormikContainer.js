@@ -8,7 +8,7 @@ function FormikContainer () {
     { key: 'Select an option', value: '' },
     { key: 'Option 1', value: 'option1' },
     { key: 'Option 2', value: 'option2' },
-    { key: 'Option 3', value: 'option 3' }
+    { key: 'Option 3', value: 'option3' }
   ]
   const radioOptions = [
     { key: 'Option 1', value: 'rOption1' },
@@ -18,7 +18,7 @@ function FormikContainer () {
   const checkboxOptions = [
     { key: 'Option 1', value: 'cOption1' },
     { key: 'Option 2', value: 'cOption2' },
-    { key: 'Option 3', value: 'cOption 3' }
+    { key: 'Option 3', value: 'cOption3' }
   ]
   const initialValues = {
     email: '',
