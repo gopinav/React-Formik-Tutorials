@@ -39,7 +39,8 @@ function FormikContainer () {
       .nullable()
   })
   const onSubmit = values => {
-    console.log('Form data', JSON.parse(JSON.stringify(values)))
+    console.log('Form data', values)
+    console.log('Saved data', JSON.parse(JSON.stringify(values)))
   }
 
   return (
@@ -83,7 +84,6 @@ function FormikContainer () {
             control='date'
             label='Pick a date'
             name='birthDate'
-            formik={formik}
           />
           <button type='submit'>Submit</button>
         </Form>
