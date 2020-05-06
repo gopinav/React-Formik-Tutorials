@@ -17,6 +17,7 @@ input + label {
 
 input[type='text'],
 input[type='email'],
+input[type='password'],
 textarea,
 select {
   display: block;
